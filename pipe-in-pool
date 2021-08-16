@@ -1,1 +1,25 @@
-tyuio
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int V = int.Parse(Console.ReadLine());
+		int p1= int.Parse(Console.ReadLine());
+		int p2= int.Parse(Console.ReadLine());
+		double H = double.Parse(Console.ReadLine());
+		double water = H*p1 + H*p2 ;
+		if (water<=V)
+		{ 
+			Console.WriteLine("The pool is {0}% full. Pipe1 {1}%. Pipe2 {2}%.",
+		    Math.Truncate(water/V*100), 
+			Math.Truncate(H*p1/water*100) ,
+		    Math.Truncate(H*p2/water*100));
+		}
+		else 
+			Console.WriteLine("For {0} hours the pool is over flows with {1} leters.", H, water- H);
+		
+		 	
+	}
+}
+
