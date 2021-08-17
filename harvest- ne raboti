@@ -1,0 +1,25 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int vineyardArea = int.Parse(Console.ReadLine());
+		double grapesPerSquare =double.Parse(Console.ReadLine());
+		int neededLiters =int.Parse(Console.ReadLine());
+		int workers = int.Parse(Console.ReadLine());
+		double wineA= 40/100*vineyardArea;
+		double kiloGrapes= wineA*grapesPerSquare;
+		double litersWine= kiloGrapes/2.5;
+		if (litersWine<neededLiters)
+		{ double moreWineN=neededLiters-litersWine;
+			Console.WriteLine("It will be tough winter! More {0} liters wine needed.", Math.Floor(moreWineN));
+		}
+		else 
+		{ double lefttWine=litersWine-neededLiters; 
+			Console.WriteLine("Good harvest this year! Total wine:{0} leters.", Math.Floor(litersWine));
+		Console.WriteLine("{0} leters left-{1} liters per person.", Math.Floor(lefttWine), Math.Ceiling(lefttWine/workers));
+		}
+		
+	}
+}
