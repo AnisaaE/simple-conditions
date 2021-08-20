@@ -8,9 +8,13 @@ public class Program
 		double grapesPerSquare =double.Parse(Console.ReadLine());
 		int neededLiters =int.Parse(Console.ReadLine());
 		int workers = int.Parse(Console.ReadLine());
-		double wineA= 40/100*vineyardArea;
-		double kiloGrapes= wineA*grapesPerSquare;
-		double litersWine= kiloGrapes/2.5;
+		
+		double kiloGrapes= vineyardArea*grapesPerSquare;
+		//double wineA= 0.4*kiloGrapes;
+		double litersWine= 0.4*kiloGrapes/2.5;
+		//Console.WriteLine(wineA);
+			Console.WriteLine(kiloGrapes);
+			Console.WriteLine(litersWine);
 		if (litersWine<neededLiters)
 		{ double moreWineN=neededLiters-litersWine;
 			Console.WriteLine("It will be tough winter! More {0} liters wine needed.", Math.Floor(moreWineN));
