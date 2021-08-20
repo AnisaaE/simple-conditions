@@ -10,9 +10,7 @@ public class Program
 		int workers = int.Parse(Console.ReadLine());
 		
 		double kiloGrapes= vineyardArea*grapesPerSquare;
-		//double wineA= 0.4*kiloGrapes;
 		double litersWine= 0.4*kiloGrapes/2.5;
-		//Console.WriteLine(wineA);
 			Console.WriteLine(kiloGrapes);
 			Console.WriteLine(litersWine);
 		if (litersWine<neededLiters)
