@@ -1,0 +1,33 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		double money = double.Parse(Console.ReadLine());
+		string season = Console.ReadLine().ToLower();
+		double n = 0;
+		 if (money<= 100)
+		 { Console.WriteLine ("Somewhere in Bulgaria.");
+			 if (season == "summer")
+			 {   n = 0.3*money;
+			     Console.WriteLine("Camp-{0:F2}", n);
+			   } else if (season == "winter")
+			       {n= 0.7*money;
+				   Console.WriteLine("Hotel- {0:F2}", n);}	 
+		 }
+		else if (money<=1000 && money>100)
+		 { Console.WriteLine ("Somewhere in Balkans.");
+			 if (season == "summer")
+			 {   n = 0.4*money;
+			     Console.WriteLine("Camp-{0:F2}", n);
+			   } else if (season == "winter")
+			       {n= 0.8*money;
+				   Console.WriteLine("Hotel- {0:F2}", n);}	
+		 }
+		else if (money>1000)
+		  {Console.WriteLine("Somewhere in Europe");
+		   n= 0.9*money;
+		  Console.WriteLine("Hotel-{0:F2}",n);}
+	}
+}
